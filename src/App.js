@@ -216,7 +216,7 @@ function App() {
                 id={item.did}
                 image={images[i]}
                 data={item}
-                tags={images[i] && images[i].tags ? images[i].tags : []}
+                tags={images[i] && images[i].tags ? images[i].tags : null}
                 isLoading={setIsLoading}
                 showBuyButton={!showHistory}
               />
