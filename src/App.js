@@ -181,7 +181,7 @@ function App() {
       <Wallet />
       <main className="px-16 py-6 md:col-span-2 ">
         <div className="flex justify-center md:justify-between">
-          <img className="logo" src={process.env.PUBLIC_URL + "/logo256.png"} />
+          <img className="logo" src={process.env.PUBLIC_URL + "/brand.png"} />
           <h2 className="brand">Fotoshop</h2>
           <ImageSearch searchText={(text) => setTerm(text)} />
           <a
@@ -216,7 +216,7 @@ function App() {
                 id={item.did}
                 image={images[i]}
                 data={item}
-                tags={images[i].tags}
+                tags={images[i] && images[i].tags ? images[i].tags : []}
                 isLoading={setIsLoading}
                 showBuyButton={!showHistory}
               />
